@@ -1,0 +1,128 @@
+nohup: ignoring input
+[INFO] Device: cuda
+[INFO] Loaded 1446 samples | label vocab: ['年', '个', '月', '种', '次', '条', '名', '位', '部', '座']
+
+==================== Split 1/10 ====================
+
+[INFO] Evaluating Qwen2.5-1.5B-Instruct
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[Qwen2.5-1.5B-Instruct] acc=39.13 ± 3.35 (across seeds) | ECE=0.0782 ± 0.0161
+
+[SAMPLE-EFFICIENCY] Qwen2.5-1.5B-Instruct
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=1] acc=34.18 (inter-template std 0.63) | ECE=0.0793
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=3] acc=41.53 (inter-template std 6.51) | ECE=0.0968
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=5] acc=37.13 (inter-template std 1.81) | ECE=0.0540
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=10] acc=39.84 (inter-template std 3.98) | ECE=0.0759
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=20] acc=40.03 (inter-template std 4.82) | ECE=0.0845
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=50] acc=35.18 (inter-template std 1.95) | ECE=0.0493
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=100] acc=37.00 (inter-template std 1.88) | ECE=0.0527
+
+[INFO] Evaluating Qwen2.5-0.5B-Instruct
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[Qwen2.5-0.5B-Instruct] acc=42.81 ± 1.85 (across seeds) | ECE=0.1300 ± 0.0176
+
+[SAMPLE-EFFICIENCY] Qwen2.5-0.5B-Instruct
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=1] acc=37.39 (inter-template std 6.22) | ECE=0.1394
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=3] acc=39.89 (inter-template std 6.62) | ECE=0.1107
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=5] acc=41.84 (inter-template std 8.47) | ECE=0.1349
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=10] acc=42.32 (inter-template std 8.94) | ECE=0.1298
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=20] acc=42.98 (inter-template std 9.84) | ECE=0.1470
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=50] acc=44.06 (inter-template std 9.41) | ECE=0.1395
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=100] acc=43.29 (inter-template std 9.92) | ECE=0.1568
+
+[INFO] Evaluating ChatGLM3-6B
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:08<00:52,  8.78s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:17<00:44,  8.81s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:27<00:36,  9.25s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:36<00:27,  9.04s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:45<00:18,  9.31s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:55<00:09,  9.40s/it]Loading checkpoint shards: 100%|██████████| 7/7 [01:00<00:00,  7.85s/it]Loading checkpoint shards: 100%|██████████| 7/7 [01:00<00:00,  8.59s/it]
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[ChatGLM3-6B] acc=12.82 ± 2.00 (across seeds) | ECE=0.1804 ± 0.0165
+
+[SAMPLE-EFFICIENCY] ChatGLM3-6B
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[K=1] acc=12.49 (inter-template std 3.94) | ECE=0.1587
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[K=3] acc=14.76 (inter-template std 7.94) | ECE=0.1492
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[K=5] acc=11.15 (inter-template std 3.80) | ECE=0.1769
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[K=10] acc=11.36 (inter-template std 2.61) | ECE=0.1844
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[K=20] acc=14.44 (inter-template std 4.03) | ECE=0.1619
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[K=50] acc=15.63 (inter-template std 4.88) | ECE=0.1442
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 2, '次': 1, '条': 1, '名': 1, '位': 1, '部': 2, '座': 2}
+[K=100] acc=12.70 (inter-template std 2.23) | ECE=0.1658
+
+[INFO] Evaluating InternLM2.5-7B-Chat
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards:  12%|█▎        | 1/8 [00:29<03:28, 29.74s/it]Loading checkpoint shards:  25%|██▌       | 2/8 [00:57<02:51, 28.62s/it]Loading checkpoint shards:  38%|███▊      | 3/8 [01:27<02:25, 29.01s/it]Loading checkpoint shards:  50%|█████     | 4/8 [01:55<01:55, 28.85s/it]Loading checkpoint shards:  62%|██████▎   | 5/8 [02:24<01:26, 28.84s/it]Loading checkpoint shards:  75%|███████▌  | 6/8 [02:53<00:57, 28.95s/it]Loading checkpoint shards:  88%|████████▊ | 7/8 [03:23<00:29, 29.25s/it]Loading checkpoint shards: 100%|██████████| 8/8 [03:53<00:00, 29.52s/it]Loading checkpoint shards: 100%|██████████| 8/8 [03:53<00:00, 29.20s/it]
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[InternLM2.5-7B-Chat] acc=60.55 ± 2.47 (across seeds) | ECE=0.2387 ± 0.0240
+
+[SAMPLE-EFFICIENCY] InternLM2.5-7B-Chat
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=1] acc=48.01 (inter-template std 14.34) | ECE=0.1982
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=3] acc=58.92 (inter-template std 14.72) | ECE=0.2257
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=5] acc=58.92 (inter-template std 14.40) | ECE=0.2106
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=10] acc=60.69 (inter-template std 9.88) | ECE=0.2391
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=20] acc=55.63 (inter-template std 11.09) | ECE=0.2109
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=50] acc=56.94 (inter-template std 11.13) | ECE=0.2263
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=100] acc=62.11 (inter-template std 2.68) | ECE=0.2703
+
+[INFO] Evaluating GLM-4-9B-Chat
+Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]Loading checkpoint shards:  10%|█         | 1/10 [00:32<04:48, 32.03s/it]Loading checkpoint shards:  20%|██        | 2/10 [01:00<03:58, 29.85s/it]Loading checkpoint shards:  30%|███       | 3/10 [01:31<03:31, 30.24s/it]Loading checkpoint shards:  40%|████      | 4/10 [02:02<03:04, 30.77s/it]Loading checkpoint shards:  50%|█████     | 5/10 [02:30<02:29, 29.86s/it]Loading checkpoint shards:  60%|██████    | 6/10 [03:02<02:01, 30.40s/it]Loading checkpoint shards:  70%|███████   | 7/10 [03:35<01:33, 31.17s/it]Loading checkpoint shards:  80%|████████  | 8/10 [04:03<01:00, 30.33s/it]Loading checkpoint shards:  90%|█████████ | 9/10 [04:34<00:30, 30.63s/it]Loading checkpoint shards: 100%|██████████| 10/10 [05:07<00:00, 31.10s/it]Loading checkpoint shards: 100%|██████████| 10/10 [05:07<00:00, 30.71s/it]
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[GLM-4-9B-Chat] acc=53.14 ± 5.09 (across seeds) | ECE=0.1921 ± 0.0450
+
+[SAMPLE-EFFICIENCY] GLM-4-9B-Chat
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=1] acc=36.23 (inter-template std 6.75) | ECE=0.0958
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=3] acc=50.94 (inter-template std 11.17) | ECE=0.1597
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=5] acc=45.30 (inter-template std 9.14) | ECE=0.1282
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=10] acc=62.61 (inter-template std 6.74) | ECE=0.2800
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=20] acc=55.73 (inter-template std 3.57) | ECE=0.2336
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
+[K=50] acc=51.54 (inter-template std 3.57) | ECE=0.1969
+[TOKEN-AUDIT] Candidate subword lengths: {'年': 1, '个': 1, '月': 1, '种': 1, '次': 1, '条': 1, '名': 1, '位': 1, '部': 1, '座': 1}
