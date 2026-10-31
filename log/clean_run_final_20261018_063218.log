@@ -1,0 +1,956 @@
+nohup: ignoring input
+[INFO] Device: cuda
+[INFO] Loading UD corpus: UD_Chinese-GSDSimp-master/zh_gsdsimp-ud-train.conllu
+[DATASET-AUDIT] Extracted: 1814, Discarded 999-hops: 0 (0.00%)
+[INFO] Total tasks: 1640
+
+==================== Split 1/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=879) | num_classes=6
+[CALIBRATION] T* = 1.2404 | converged = True | 95% CI = [1.0002, 1.4053]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.2404 (95% CI [1.0002, 1.4053])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1709 (95% CI [0.1417, 0.2000])
+[COMPLEXITY-AUDIT] InDist: 323/646 (50.00%)
+[COMPLEXITY-AUDIT] OOD: 217/452 (48.01%)
+[CONFIG] Baseline (No Prior) | acc=49.18 | f1=36.14 | ece=0.1709 | T*=1.2404 | converged=True
+[CALIBRATION] T* = 1.1688 | converged = True | 95% CI = [0.8366, 1.3669]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=1.1688 (95% CI [0.8366, 1.3669])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1776 (95% CI [0.1526, 0.2056])
+[COMPLEXITY-AUDIT] InDist: 350/646 (54.18%)
+[COMPLEXITY-AUDIT] OOD: 205/452 (45.35%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=50.55 | f1=38.59 | ece=0.1776 | T*=1.1688 | converged=True
+[CALIBRATION] T* = 1.2054 | converged = True | 95% CI = [0.8978, 1.3901]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=1.2054 (95% CI [0.8978, 1.3901])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1355 (95% CI [0.1086, 0.1647])
+[COMPLEXITY-AUDIT] InDist: 295/646 (45.67%)
+[COMPLEXITY-AUDIT] OOD: 203/452 (44.91%)
+[CONFIG] SIPAR (No Prior) | acc=45.36 | f1=34.54 | ece=0.1355 | T*=1.2054 | converged=True
+[CALIBRATION] T* = 1.2961 | converged = True | 95% CI = [1.0538, 1.4829]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.2961 (95% CI [1.0538, 1.4829])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1304 (95% CI [0.1034, 0.1564])
+[COMPLEXITY-AUDIT] InDist: 291/646 (45.05%)
+[COMPLEXITY-AUDIT] OOD: 171/452 (37.83%)
+[CONFIG] CAFT Full (No Prior) | acc=42.08 | f1=31.35 | ece=0.1304 | T*=1.2961 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2336 | converged = True | 95% CI = [0.9651, 1.4087]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.2336 (95% CI [0.9651, 1.4087])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0697 (95% CI [0.0524, 0.0995])
+[COMPLEXITY-AUDIT] InDist: 252/646 (39.01%)
+[COMPLEXITY-AUDIT] OOD: 193/452 (42.70%)
+[CONFIG] Baseline (MAML Prior) | acc=40.53 | f1=30.26 | ece=0.0697 | T*=1.2336 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=5008.6724 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=169.0229 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=162.4752 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=159.8881 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=158.6651 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=158.0683 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.7736 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.6259 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.5500 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.5107 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.4898 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.89 | hm_und=12.53 | hm_dir=12.53 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (0, 2), (0, 1)] | top3_drops=[4.64, 1.55, 1.18]
+[MEDIATION] Baseline (MAML Prior) | IE=0.1978 [0.1258, 0.2652]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2947 | converged = True | 95% CI = [1.0820, 1.4675]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.2947 (95% CI [1.0820, 1.4675])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1288 (95% CI [0.1026, 0.1565])
+[COMPLEXITY-AUDIT] InDist: 311/646 (48.14%)
+[COMPLEXITY-AUDIT] OOD: 196/452 (43.36%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=46.17 | f1=34.46 | ece=0.1288 | T*=1.2947 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2557 | converged = True | 95% CI = [1.0379, 1.4501]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=1.2557 (95% CI [1.0379, 1.4501])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1362 (95% CI [0.1112, 0.1616])
+[COMPLEXITY-AUDIT] InDist: 338/646 (52.32%)
+[COMPLEXITY-AUDIT] OOD: 201/452 (44.47%)
+[CONFIG] SIPAR (MAML Prior) | acc=49.09 | f1=34.80 | ece=0.1362 | T*=1.2557 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2397 | converged = True | 95% CI = [0.9759, 1.4368]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.2397 (95% CI [0.9759, 1.4368])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0786 (95% CI [0.0591, 0.1085])
+[COMPLEXITY-AUDIT] InDist: 245/646 (37.93%)
+[COMPLEXITY-AUDIT] OOD: 245/452 (54.20%)
+[CONFIG] CAFT Full (MAML Prior) | acc=44.63 | f1=32.35 | ece=0.0786 | T*=1.2397 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=7512.8838 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=172.2028 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=164.5416 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=161.3608 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=159.7166 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=158.8092 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=158.2963 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=158.0053 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.8403 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.7464 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.6922 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=14.76 | hm_und=12.48 | hm_dir=12.48 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 2), (0, 2), (1, 1)] | top3_drops=[3.01, 0.0, -0.36]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.0429 [-0.0245, 0.1122]
+
+==================== Split 2/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=879) | num_classes=6
+[CALIBRATION] T* = 1.1519 | converged = True | 95% CI = [0.0500, 1.3871]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.1519 (95% CI [0.0500, 1.3871])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1489 (95% CI [0.1226, 0.1766])
+[COMPLEXITY-AUDIT] InDist: 310/646 (47.99%)
+[COMPLEXITY-AUDIT] OOD: 223/452 (49.34%)
+[CONFIG] Baseline (No Prior) | acc=48.54 | f1=35.38 | ece=0.1489 | T*=1.1519 | converged=True
+[CALIBRATION] T* = 1.1193 | converged = True | 95% CI = [0.8106, 1.3590]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=1.1193 (95% CI [0.8106, 1.3590])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1092 (95% CI [0.0829, 0.1380])
+[COMPLEXITY-AUDIT] InDist: 296/646 (45.82%)
+[COMPLEXITY-AUDIT] OOD: 175/452 (38.72%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=42.90 | f1=33.68 | ece=0.1092 | T*=1.1193 | converged=True
+[CALIBRATION] T* = 1.2535 | converged = True | 95% CI = [0.5601, 1.4449]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=1.2535 (95% CI [0.5601, 1.4449])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0887 (95% CI [0.0730, 0.1189])
+[COMPLEXITY-AUDIT] InDist: 306/646 (47.37%)
+[COMPLEXITY-AUDIT] OOD: 121/452 (26.77%)
+[CONFIG] SIPAR (No Prior) | acc=38.89 | f1=29.97 | ece=0.0887 | T*=1.2535 | converged=True
+[CALIBRATION] T* = 1.1820 | converged = True | 95% CI = [0.4910, 1.3983]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.1820 (95% CI [0.4910, 1.3983])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0694 (95% CI [0.0543, 0.0929])
+[COMPLEXITY-AUDIT] InDist: 357/646 (55.26%)
+[COMPLEXITY-AUDIT] OOD: 91/452 (20.13%)
+[CONFIG] CAFT Full (No Prior) | acc=40.80 | f1=30.51 | ece=0.0694 | T*=1.1820 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2117 | converged = True | 95% CI = [0.8832, 1.3798]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.2117 (95% CI [0.8832, 1.3798])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0926 (95% CI [0.0686, 0.1183])
+[COMPLEXITY-AUDIT] InDist: 334/646 (51.70%)
+[COMPLEXITY-AUDIT] OOD: 134/452 (29.65%)
+[CONFIG] Baseline (MAML Prior) | acc=42.62 | f1=32.08 | ece=0.0926 | T*=1.2117 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4831.4751 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=167.8126 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=161.2635 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=158.6490 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=157.4077 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=156.7915 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=156.4805 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=156.3235 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=156.2440 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=156.2039 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=156.1835 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.50 | hm_und=12.00 | hm_dir=12.00 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (1, 1), (0, 1)] | top3_drops=[6.38, 5.56, 2.0]
+[MEDIATION] Baseline (MAML Prior) | IE=0.2714 [0.2073, 0.3419]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1656 | converged = True | 95% CI = [0.8985, 1.3501]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.1656 (95% CI [0.8985, 1.3501])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0984 (95% CI [0.0834, 0.1242])
+[COMPLEXITY-AUDIT] InDist: 387/646 (59.91%)
+[COMPLEXITY-AUDIT] OOD: 204/452 (45.13%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=53.83 | f1=37.43 | ece=0.0984 | T*=1.1656 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 0.9540 | converged = True | 95% CI = [0.0500, 1.2109]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=0.9540 (95% CI [0.0500, 1.2109])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0369 (95% CI [0.0300, 0.0708])
+[COMPLEXITY-AUDIT] InDist: 334/646 (51.70%)
+[COMPLEXITY-AUDIT] OOD: 132/452 (29.20%)
+[CONFIG] SIPAR (MAML Prior) | acc=42.44 | f1=30.97 | ece=0.0369 | T*=0.9540 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2585 | converged = True | 95% CI = [0.9584, 1.4404]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.2585 (95% CI [0.9584, 1.4404])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1111 (95% CI [0.0856, 0.1390])
+[COMPLEXITY-AUDIT] InDist: 329/646 (50.93%)
+[COMPLEXITY-AUDIT] OOD: 149/452 (32.96%)
+[CONFIG] CAFT Full (MAML Prior) | acc=43.53 | f1=32.90 | ece=0.1111 | T*=1.2585 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=6591.0137 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=170.2467 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=162.6742 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=159.4902 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=157.9198 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=157.1122 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=156.6865 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=156.4557 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=156.3276 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=156.2547 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=156.2125 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=14.83 | hm_und=12.53 | hm_dir=12.53 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 2), (0, 3), (1, 1)] | top3_drops=[10.29, 4.83, 1.64]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.3347 [0.2720, 0.3975]
+
+==================== Split 3/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=879) | num_classes=6
+[CALIBRATION] T* = 0.5000 | converged = False | 95% CI = [0.0500, 1.0998]
+[AUDIT-ALERT] Temperature scaling failed to converge for Baseline (No Prior). Reverted to T=0.5000
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1984 (95% CI [0.1731, 0.2277])
+[COMPLEXITY-AUDIT] InDist: 271/646 (41.95%)
+[COMPLEXITY-AUDIT] OOD: 131/452 (28.98%)
+[CONFIG] Baseline (No Prior) | acc=36.61 | f1=28.24 | ece=0.1984 | T*=0.5000 | converged=False
+[CALIBRATION] T* = 0.9260 | converged = True | 95% CI = [0.0500, 1.1411]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=0.9260 (95% CI [0.0500, 1.1411])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0794 (95% CI [0.0596, 0.1089])
+[COMPLEXITY-AUDIT] InDist: 330/646 (51.08%)
+[COMPLEXITY-AUDIT] OOD: 78/452 (17.26%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=37.16 | f1=26.47 | ece=0.0794 | T*=0.9260 | converged=True
+[CALIBRATION] T* = 0.5000 | converged = False | 95% CI = [0.0500, 1.1214]
+[AUDIT-ALERT] Temperature scaling failed to converge for SIPAR (No Prior). Reverted to T=0.5000
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.2160 (95% CI [0.1892, 0.2438])
+[COMPLEXITY-AUDIT] InDist: 236/646 (36.53%)
+[COMPLEXITY-AUDIT] OOD: 126/452 (27.88%)
+[CONFIG] SIPAR (No Prior) | acc=32.97 | f1=27.07 | ece=0.2160 | T*=0.5000 | converged=False
+[CALIBRATION] T* = 1.0928 | converged = True | 95% CI = [0.0500, 1.2967]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.0928 (95% CI [0.0500, 1.2967])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0582 (95% CI [0.0382, 0.0891])
+[COMPLEXITY-AUDIT] InDist: 301/646 (46.59%)
+[COMPLEXITY-AUDIT] OOD: 132/452 (29.20%)
+[CONFIG] CAFT Full (No Prior) | acc=39.44 | f1=28.61 | ece=0.0582 | T*=1.0928 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1765 | converged = True | 95% CI = [0.8768, 1.3420]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.1765 (95% CI [0.8768, 1.3420])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0659 (95% CI [0.0477, 0.0964])
+[COMPLEXITY-AUDIT] InDist: 316/646 (48.92%)
+[COMPLEXITY-AUDIT] OOD: 137/452 (30.31%)
+[CONFIG] Baseline (MAML Prior) | acc=41.26 | f1=31.44 | ece=0.0659 | T*=1.1765 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=5409.8569 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=169.5959 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=162.8784 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=160.1306 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=158.7940 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=158.1095 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.7527 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.5659 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.4680 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.4167 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.3896 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=15.08 | hm_und=12.61 | hm_dir=12.61 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(0, 1), (1, 2), (1, 1)] | top3_drops=[3.83, 3.19, 1.28]
+[MEDIATION] Baseline (MAML Prior) | IE=0.1722 [0.1060, 0.2429]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2089 | converged = True | 95% CI = [0.8977, 1.4163]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.2089 (95% CI [0.8977, 1.4163])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0529 (95% CI [0.0362, 0.0833])
+[COMPLEXITY-AUDIT] InDist: 277/646 (42.88%)
+[COMPLEXITY-AUDIT] OOD: 148/452 (32.74%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=38.71 | f1=27.97 | ece=0.0529 | T*=1.2089 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 0.9957 | converged = True | 95% CI = [0.0500, 1.1868]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=0.9957 (95% CI [0.0500, 1.1868])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0655 (95% CI [0.0483, 0.0958])
+[COMPLEXITY-AUDIT] InDist: 371/646 (57.43%)
+[COMPLEXITY-AUDIT] OOD: 150/452 (33.19%)
+[CONFIG] SIPAR (MAML Prior) | acc=47.45 | f1=33.70 | ece=0.0655 | T*=0.9957 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1558 | converged = True | 95% CI = [0.1960, 1.3775]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.1558 (95% CI [0.1960, 1.3775])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0942 (95% CI [0.0691, 0.1220])
+[COMPLEXITY-AUDIT] InDist: 315/646 (48.76%)
+[COMPLEXITY-AUDIT] OOD: 189/452 (41.81%)
+[CONFIG] CAFT Full (MAML Prior) | acc=45.90 | f1=33.31 | ece=0.0942 | T*=1.1558 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=6415.7031 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=170.4422 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=163.2518 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=160.2722 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=158.8074 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=158.0462 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.6411 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.4243 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.3081 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.2448 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.2096 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=14.87 | hm_und=12.25 | hm_dir=12.25 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 2), (0, 3), (0, 1)] | top3_drops=[4.55, 4.19, 3.37]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.2520 [0.1865, 0.3115]
+
+==================== Split 4/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=869) | num_classes=6
+[CALIBRATION] T* = 1.0741 | converged = True | 95% CI = [0.0500, 1.3237]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.0741 (95% CI [0.0500, 1.3237])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0651 (95% CI [0.0515, 0.0956])
+[COMPLEXITY-AUDIT] InDist: 372/646 (57.59%)
+[COMPLEXITY-AUDIT] OOD: 90/452 (19.91%)
+[CONFIG] Baseline (No Prior) | acc=42.08 | f1=30.48 | ece=0.0651 | T*=1.0741 | converged=True
+[CALIBRATION] T* = 1.2543 | converged = True | 95% CI = [0.9934, 1.4238]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=1.2543 (95% CI [0.9934, 1.4238])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0385 (95% CI [0.0263, 0.0685])
+[COMPLEXITY-AUDIT] InDist: 295/646 (45.67%)
+[COMPLEXITY-AUDIT] OOD: 109/452 (24.12%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=36.79 | f1=29.71 | ece=0.0385 | T*=1.2543 | converged=True
+[CALIBRATION] T* = 1.0970 | converged = True | 95% CI = [0.0500, 1.3308]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=1.0970 (95% CI [0.0500, 1.3308])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0810 (95% CI [0.0577, 0.1083])
+[COMPLEXITY-AUDIT] InDist: 325/646 (50.31%)
+[COMPLEXITY-AUDIT] OOD: 118/452 (26.11%)
+[CONFIG] SIPAR (No Prior) | acc=40.35 | f1=30.70 | ece=0.0810 | T*=1.0970 | converged=True
+[CALIBRATION] T* = 1.1529 | converged = True | 95% CI = [0.7044, 1.3809]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.1529 (95% CI [0.7044, 1.3809])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0731 (95% CI [0.0520, 0.1004])
+[COMPLEXITY-AUDIT] InDist: 371/646 (57.43%)
+[COMPLEXITY-AUDIT] OOD: 91/452 (20.13%)
+[CONFIG] CAFT Full (No Prior) | acc=42.08 | f1=30.58 | ece=0.0731 | T*=1.1529 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1151 | converged = True | 95% CI = [0.0500, 1.2917]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.1151 (95% CI [0.0500, 1.2917])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0717 (95% CI [0.0545, 0.0998])
+[COMPLEXITY-AUDIT] InDist: 381/646 (58.98%)
+[COMPLEXITY-AUDIT] OOD: 90/452 (19.91%)
+[CONFIG] Baseline (MAML Prior) | acc=42.90 | f1=32.51 | ece=0.0717 | T*=1.1151 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4297.8472 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=171.5385 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=164.9475 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=162.4868 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=161.3720 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=160.8342 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=160.5676 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=160.4349 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=160.3690 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=160.3365 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=160.3203 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.40 | hm_und=12.07 | hm_dir=12.07 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (1, 1), (0, 1)] | top3_drops=[2.09, 0.64, 0.46]
+[MEDIATION] Baseline (MAML Prior) | IE=0.1210 [0.0531, 0.1890]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0910 | converged = True | 95% CI = [0.3537, 1.3220]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.0910 (95% CI [0.3537, 1.3220])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0838 (95% CI [0.0619, 0.1104])
+[COMPLEXITY-AUDIT] InDist: 377/646 (58.36%)
+[COMPLEXITY-AUDIT] OOD: 171/452 (37.83%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=49.91 | f1=35.02 | ece=0.0838 | T*=1.0910 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2611 | converged = True | 95% CI = [0.9838, 1.4568]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=1.2611 (95% CI [0.9838, 1.4568])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0570 (95% CI [0.0386, 0.0861])
+[COMPLEXITY-AUDIT] InDist: 314/646 (48.61%)
+[COMPLEXITY-AUDIT] OOD: 107/452 (23.67%)
+[CONFIG] SIPAR (MAML Prior) | acc=38.34 | f1=29.81 | ece=0.0570 | T*=1.2611 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0727 | converged = True | 95% CI = [0.1719, 1.2712]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.0727 (95% CI [0.1719, 1.2712])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0694 (95% CI [0.0515, 0.0963])
+[COMPLEXITY-AUDIT] InDist: 436/646 (67.49%)
+[COMPLEXITY-AUDIT] OOD: 105/452 (23.23%)
+[CONFIG] CAFT Full (MAML Prior) | acc=49.27 | f1=33.30 | ece=0.0694 | T*=1.0727 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=5343.3745 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=173.0977 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=165.9694 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=163.1419 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=161.8159 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=161.1535 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=160.8105 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=160.6297 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=160.5333 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=160.4809 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=160.4519 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=13.53 | hm_und=11.45 | hm_dir=11.45 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 1), (1, 2), (0, 1)] | top3_drops=[3.55, 2.91, 1.55]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.1645 [0.1091, 0.2237]
+
+==================== Split 5/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=882) | num_classes=6
+[CALIBRATION] T* = 1.0732 | converged = True | 95% CI = [0.0500, 1.3241]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.0732 (95% CI [0.0500, 1.3241])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0481 (95% CI [0.0389, 0.0794])
+[COMPLEXITY-AUDIT] InDist: 315/646 (48.76%)
+[COMPLEXITY-AUDIT] OOD: 62/452 (13.72%)
+[CONFIG] Baseline (No Prior) | acc=34.34 | f1=24.79 | ece=0.0481 | T*=1.0732 | converged=True
+[CALIBRATION] T* = 1.2481 | converged = True | 95% CI = [0.4646, 1.4356]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=1.2481 (95% CI [0.4646, 1.4356])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0525 (95% CI [0.0332, 0.0817])
+[COMPLEXITY-AUDIT] InDist: 303/646 (46.90%)
+[COMPLEXITY-AUDIT] OOD: 90/452 (19.91%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=35.79 | f1=27.88 | ece=0.0525 | T*=1.2481 | converged=True
+[CALIBRATION] T* = 1.2148 | converged = True | 95% CI = [0.0500, 1.4034]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=1.2148 (95% CI [0.0500, 1.4034])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0541 (95% CI [0.0390, 0.0843])
+[COMPLEXITY-AUDIT] InDist: 307/646 (47.52%)
+[COMPLEXITY-AUDIT] OOD: 92/452 (20.35%)
+[CONFIG] SIPAR (No Prior) | acc=36.34 | f1=29.01 | ece=0.0541 | T*=1.2148 | converged=True
+[CALIBRATION] T* = 1.1429 | converged = True | 95% CI = [0.0500, 1.3639]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.1429 (95% CI [0.0500, 1.3639])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0460 (95% CI [0.0329, 0.0785])
+[COMPLEXITY-AUDIT] InDist: 380/646 (58.82%)
+[COMPLEXITY-AUDIT] OOD: 63/452 (13.94%)
+[CONFIG] CAFT Full (No Prior) | acc=40.35 | f1=29.06 | ece=0.0460 | T*=1.1429 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2559 | converged = True | 95% CI = [1.0119, 1.4158]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.2559 (95% CI [1.0119, 1.4158])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0658 (95% CI [0.0504, 0.0944])
+[COMPLEXITY-AUDIT] InDist: 267/646 (41.33%)
+[COMPLEXITY-AUDIT] OOD: 109/452 (24.12%)
+[CONFIG] Baseline (MAML Prior) | acc=34.24 | f1=26.30 | ece=0.0658 | T*=1.2559 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4533.6597 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=171.5603 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=164.7603 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=162.1219 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=160.8791 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=160.2700 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=159.9699 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=159.8208 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=159.7459 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=159.7080 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=159.6888 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.03 | hm_und=11.68 | hm_dir=11.68 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (1, 3), (0, 3)] | top3_drops=[1.46, 0.73, 0.27]
+[MEDIATION] Baseline (MAML Prior) | IE=0.0691 [-0.0160, 0.1516]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2453 | converged = True | 95% CI = [1.0153, 1.4248]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.2453 (95% CI [1.0153, 1.4248])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0670 (95% CI [0.0546, 0.0980])
+[COMPLEXITY-AUDIT] InDist: 358/646 (55.42%)
+[COMPLEXITY-AUDIT] OOD: 53/452 (11.73%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=37.43 | f1=27.12 | ece=0.0670 | T*=1.2453 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1997 | converged = True | 95% CI = [0.9044, 1.3628]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=1.1997 (95% CI [0.9044, 1.3628])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1042 (95% CI [0.0867, 0.1250])
+[COMPLEXITY-AUDIT] InDist: 347/646 (53.72%)
+[COMPLEXITY-AUDIT] OOD: 54/452 (11.95%)
+[CONFIG] SIPAR (MAML Prior) | acc=36.52 | f1=25.35 | ece=0.1042 | T*=1.1997 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2095 | converged = True | 95% CI = [0.8985, 1.3984]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.2095 (95% CI [0.8985, 1.3984])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0593 (95% CI [0.0416, 0.0886])
+[COMPLEXITY-AUDIT] InDist: 348/646 (53.87%)
+[COMPLEXITY-AUDIT] OOD: 93/452 (20.58%)
+[CONFIG] CAFT Full (MAML Prior) | acc=40.16 | f1=28.79 | ece=0.0593 | T*=1.2095 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=7355.9087 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=174.0491 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=166.1894 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=162.8933 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=161.2161 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=160.2962 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=159.7791 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=159.4873 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=159.3225 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=159.2294 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=159.1767 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=14.45 | hm_und=12.20 | hm_dir=12.20 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 2), (1, 3), (1, 1)] | top3_drops=[3.28, 1.28, 1.0]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.1995 [0.1247, 0.2676]
+
+==================== Split 6/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=884) | num_classes=6
+[CALIBRATION] T* = 1.3146 | converged = True | 95% CI = [1.1058, 1.4844]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.3146 (95% CI [1.1058, 1.4844])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0951 (95% CI [0.0813, 0.1223])
+[COMPLEXITY-AUDIT] InDist: 341/646 (52.79%)
+[COMPLEXITY-AUDIT] OOD: 96/452 (21.24%)
+[CONFIG] Baseline (No Prior) | acc=39.80 | f1=28.61 | ece=0.0951 | T*=1.3146 | converged=True
+[CALIBRATION] T* = 1.2698 | converged = True | 95% CI = [0.9050, 1.4408]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=1.2698 (95% CI [0.9050, 1.4408])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1463 (95% CI [0.1180, 0.1723])
+[COMPLEXITY-AUDIT] InDist: 334/646 (51.70%)
+[COMPLEXITY-AUDIT] OOD: 173/452 (38.27%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=46.17 | f1=34.03 | ece=0.1463 | T*=1.2698 | converged=True
+[CALIBRATION] T* = 1.2603 | converged = True | 95% CI = [0.9578, 1.4477]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=1.2603 (95% CI [0.9578, 1.4477])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0805 (95% CI [0.0581, 0.1065])
+[COMPLEXITY-AUDIT] InDist: 352/646 (54.49%)
+[COMPLEXITY-AUDIT] OOD: 114/452 (25.22%)
+[CONFIG] SIPAR (No Prior) | acc=42.44 | f1=30.81 | ece=0.0805 | T*=1.2603 | converged=True
+[CALIBRATION] T* = 1.2202 | converged = True | 95% CI = [0.8679, 1.4346]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.2202 (95% CI [0.8679, 1.4346])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0818 (95% CI [0.0657, 0.1095])
+[COMPLEXITY-AUDIT] InDist: 336/646 (52.01%)
+[COMPLEXITY-AUDIT] OOD: 107/452 (23.67%)
+[CONFIG] CAFT Full (No Prior) | acc=40.35 | f1=30.95 | ece=0.0818 | T*=1.2202 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2902 | converged = True | 95% CI = [1.1247, 1.4466]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.2902 (95% CI [1.1247, 1.4466])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0482 (95% CI [0.0344, 0.0807])
+[COMPLEXITY-AUDIT] InDist: 339/646 (52.48%)
+[COMPLEXITY-AUDIT] OOD: 93/452 (20.58%)
+[CONFIG] Baseline (MAML Prior) | acc=39.34 | f1=28.98 | ece=0.0482 | T*=1.2902 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4585.0439 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=165.6732 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=159.2882 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=156.8382 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=155.7047 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=155.1562 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=154.8911 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=154.7628 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=154.6998 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=154.6684 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=154.6521 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=15.05 | hm_und=12.74 | hm_dir=12.74 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (1, 3), (0, 1)] | top3_drops=[3.37, 1.82, 1.28]
+[MEDIATION] Baseline (MAML Prior) | IE=0.1343 [0.0625, 0.2037]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.3066 | converged = True | 95% CI = [1.1004, 1.4648]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.3066 (95% CI [1.1004, 1.4648])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0650 (95% CI [0.0585, 0.0963])
+[COMPLEXITY-AUDIT] InDist: 338/646 (52.32%)
+[COMPLEXITY-AUDIT] OOD: 105/452 (23.23%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=40.35 | f1=29.22 | ece=0.0650 | T*=1.3066 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.2300 | converged = True | 95% CI = [0.9500, 1.4147]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=1.2300 (95% CI [0.9500, 1.4147])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0631 (95% CI [0.0503, 0.0904])
+[COMPLEXITY-AUDIT] InDist: 402/646 (62.23%)
+[COMPLEXITY-AUDIT] OOD: 103/452 (22.79%)
+[CONFIG] SIPAR (MAML Prior) | acc=45.99 | f1=32.07 | ece=0.0631 | T*=1.2300 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.3149 | converged = True | 95% CI = [1.1100, 1.4854]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.3149 (95% CI [1.1100, 1.4854])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0541 (95% CI [0.0413, 0.0842])
+[COMPLEXITY-AUDIT] InDist: 327/646 (50.62%)
+[COMPLEXITY-AUDIT] OOD: 104/452 (23.01%)
+[CONFIG] CAFT Full (MAML Prior) | acc=39.25 | f1=29.86 | ece=0.0541 | T*=1.3149 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=6193.5381 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=168.6580 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=161.5439 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=158.6563 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=157.2727 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=156.5622 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=156.1870 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=155.9890 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=155.8837 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=155.8267 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=155.7951 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=15.34 | hm_und=12.96 | hm_dir=12.96 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 1), (0, 2), (0, 1)] | top3_drops=[0.91, 0.82, 0.73]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.0766 [0.0000, 0.1508]
+
+==================== Split 7/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=879) | num_classes=6
+[CALIBRATION] T* = 1.1110 | converged = True | 95% CI = [0.0500, 1.1028]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.1110 (95% CI [0.0500, 1.1028])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0374 (95% CI [0.0267, 0.0682])
+[COMPLEXITY-AUDIT] InDist: 301/646 (46.59%)
+[COMPLEXITY-AUDIT] OOD: 85/452 (18.81%)
+[CONFIG] Baseline (No Prior) | acc=35.15 | f1=25.88 | ece=0.0374 | T*=1.1110 | converged=True
+[CALIBRATION] T* = 0.9072 | converged = True | 95% CI = [0.0500, 1.2197]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=0.9072 (95% CI [0.0500, 1.2197])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0658 (95% CI [0.0457, 0.0933])
+[COMPLEXITY-AUDIT] InDist: 297/646 (45.98%)
+[COMPLEXITY-AUDIT] OOD: 88/452 (19.47%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=35.06 | f1=27.14 | ece=0.0658 | T*=0.9072 | converged=True
+[CALIBRATION] T* = 0.8963 | converged = True | 95% CI = [0.0500, 1.1756]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=0.8963 (95% CI [0.0500, 1.1756])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0626 (95% CI [0.0475, 0.0940])
+[COMPLEXITY-AUDIT] InDist: 302/646 (46.75%)
+[COMPLEXITY-AUDIT] OOD: 90/452 (19.91%)
+[CONFIG] SIPAR (No Prior) | acc=35.70 | f1=28.01 | ece=0.0626 | T*=0.8963 | converged=True
+[CALIBRATION] T* = 1.0244 | converged = True | 95% CI = [0.0500, 1.2237]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.0244 (95% CI [0.0500, 1.2237])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0327 (95% CI [0.0311, 0.0679])
+[COMPLEXITY-AUDIT] InDist: 315/646 (48.76%)
+[COMPLEXITY-AUDIT] OOD: 84/452 (18.58%)
+[CONFIG] CAFT Full (No Prior) | acc=36.34 | f1=28.21 | ece=0.0327 | T*=1.0244 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0749 | converged = True | 95% CI = [0.0500, 1.2984]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.0749 (95% CI [0.0500, 1.2984])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0839 (95% CI [0.0570, 0.1110])
+[COMPLEXITY-AUDIT] InDist: 339/646 (52.48%)
+[COMPLEXITY-AUDIT] OOD: 159/452 (35.18%)
+[CONFIG] Baseline (MAML Prior) | acc=45.36 | f1=33.70 | ece=0.0839 | T*=1.0749 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4799.7158 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=168.9176 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=162.2123 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=159.6035 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=158.3972 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=157.8053 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.5113 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.3653 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.2929 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.2570 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.2390 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.41 | hm_und=12.27 | hm_dir=12.27 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (1, 1), (0, 2)] | top3_drops=[5.56, 2.46, 1.55]
+[MEDIATION] Baseline (MAML Prior) | IE=0.2269 [0.1667, 0.2892]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1517 | converged = True | 95% CI = [0.6642, 1.3509]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.1517 (95% CI [0.6642, 1.3509])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0946 (95% CI [0.0682, 0.1197])
+[COMPLEXITY-AUDIT] InDist: 331/646 (51.24%)
+[COMPLEXITY-AUDIT] OOD: 171/452 (37.83%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=45.72 | f1=35.47 | ece=0.0946 | T*=1.1517 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0976 | converged = True | 95% CI = [0.0500, 1.3702]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=1.0976 (95% CI [0.0500, 1.3702])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0788 (95% CI [0.0561, 0.1084])
+[COMPLEXITY-AUDIT] InDist: 329/646 (50.93%)
+[COMPLEXITY-AUDIT] OOD: 154/452 (34.07%)
+[CONFIG] SIPAR (MAML Prior) | acc=43.99 | f1=32.07 | ece=0.0788 | T*=1.0976 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0787 | converged = True | 95% CI = [0.0500, 1.2508]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.0787 (95% CI [0.0500, 1.2508])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0726 (95% CI [0.0478, 0.1012])
+[COMPLEXITY-AUDIT] InDist: 330/646 (51.08%)
+[COMPLEXITY-AUDIT] OOD: 151/452 (33.41%)
+[CONFIG] CAFT Full (MAML Prior) | acc=43.81 | f1=33.14 | ece=0.0726 | T*=1.0787 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=7198.0386 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=172.1151 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=164.2120 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=160.8892 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=159.2366 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=158.3537 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.8618 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.5824 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.4223 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.3303 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.2769 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=14.96 | hm_und=12.70 | hm_dir=12.70 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 2), (1, 1), (0, 1)] | top3_drops=[4.55, 3.01, 2.64]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.2100 [0.1455, 0.2766]
+
+==================== Split 8/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=876) | num_classes=6
+[CALIBRATION] T* = 1.0266 | converged = True | 95% CI = [0.0500, 1.2644]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.0266 (95% CI [0.0500, 1.2644])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0541 (95% CI [0.0388, 0.0860])
+[COMPLEXITY-AUDIT] InDist: 357/646 (55.26%)
+[COMPLEXITY-AUDIT] OOD: 98/452 (21.68%)
+[CONFIG] Baseline (No Prior) | acc=41.44 | f1=31.59 | ece=0.0541 | T*=1.0266 | converged=True
+[CALIBRATION] T* = 0.9971 | converged = True | 95% CI = [0.0500, 1.3162]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=0.9971 (95% CI [0.0500, 1.3162])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0682 (95% CI [0.0509, 0.0987])
+[COMPLEXITY-AUDIT] InDist: 344/646 (53.25%)
+[COMPLEXITY-AUDIT] OOD: 101/452 (22.35%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=40.53 | f1=30.43 | ece=0.0682 | T*=0.9971 | converged=True
+[CALIBRATION] T* = 0.9362 | converged = True | 95% CI = [0.0500, 1.2030]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=0.9362 (95% CI [0.0500, 1.2030])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0411 (95% CI [0.0350, 0.0748])
+[COMPLEXITY-AUDIT] InDist: 369/646 (57.12%)
+[COMPLEXITY-AUDIT] OOD: 97/452 (21.46%)
+[CONFIG] SIPAR (No Prior) | acc=42.44 | f1=30.96 | ece=0.0411 | T*=0.9362 | converged=True
+[CALIBRATION] T* = 1.0957 | converged = True | 95% CI = [0.0500, 1.0438]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.0957 (95% CI [0.0500, 1.0438])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0653 (95% CI [0.0491, 0.0966])
+[COMPLEXITY-AUDIT] InDist: 388/646 (60.06%)
+[COMPLEXITY-AUDIT] OOD: 94/452 (20.80%)
+[CONFIG] CAFT Full (No Prior) | acc=43.90 | f1=33.35 | ece=0.0653 | T*=1.0957 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1121 | converged = True | 95% CI = [0.4021, 1.3394]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.1121 (95% CI [0.4021, 1.3394])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0505 (95% CI [0.0384, 0.0813])
+[COMPLEXITY-AUDIT] InDist: 312/646 (48.30%)
+[COMPLEXITY-AUDIT] OOD: 111/452 (24.56%)
+[CONFIG] Baseline (MAML Prior) | acc=38.52 | f1=30.41 | ece=0.0505 | T*=1.1121 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4556.9805 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=168.1866 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=161.8608 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=159.4031 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=158.2466 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=157.6613 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.3640 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.2174 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.1466 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.1127 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.0961 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.93 | hm_und=12.47 | hm_dir=12.47 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (1, 3), (0, 1)] | top3_drops=[3.92, 1.73, 1.46]
+[MEDIATION] Baseline (MAML Prior) | IE=0.1868 [0.1135, 0.2554]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1877 | converged = True | 95% CI = [0.9463, 1.3827]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.1877 (95% CI [0.9463, 1.3827])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0771 (95% CI [0.0593, 0.1091])
+[COMPLEXITY-AUDIT] InDist: 259/646 (40.09%)
+[COMPLEXITY-AUDIT] OOD: 174/452 (38.50%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=39.44 | f1=28.81 | ece=0.0771 | T*=1.1877 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1186 | converged = True | 95% CI = [0.6869, 1.3613]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=1.1186 (95% CI [0.6869, 1.3613])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0705 (95% CI [0.0521, 0.0989])
+[COMPLEXITY-AUDIT] InDist: 374/646 (57.89%)
+[COMPLEXITY-AUDIT] OOD: 109/452 (24.12%)
+[CONFIG] SIPAR (MAML Prior) | acc=43.99 | f1=33.30 | ece=0.0705 | T*=1.1186 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0798 | converged = True | 95% CI = [0.0500, 1.2704]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.0798 (95% CI [0.0500, 1.2704])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0598 (95% CI [0.0427, 0.0897])
+[COMPLEXITY-AUDIT] InDist: 325/646 (50.31%)
+[COMPLEXITY-AUDIT] OOD: 88/452 (19.47%)
+[CONFIG] CAFT Full (MAML Prior) | acc=37.61 | f1=29.47 | ece=0.0598 | T*=1.0798 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=6186.6094 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=170.2710 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=163.1678 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=160.2242 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=158.7911 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=158.0560 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.6691 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.4638 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.3544 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.2957 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.2634 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=14.62 | hm_und=12.22 | hm_dir=12.22 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 3), (0, 3), (1, 2)] | top3_drops=[3.46, 1.18, 1.09]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.2663 [0.1913, 0.3317]
+
+==================== Split 9/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=877) | num_classes=6
+[CALIBRATION] T* = 0.8983 | converged = True | 95% CI = [0.0500, 1.1259]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=0.8983 (95% CI [0.0500, 1.1259])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1133 (95% CI [0.0908, 0.1383])
+[COMPLEXITY-AUDIT] InDist: 355/646 (54.95%)
+[COMPLEXITY-AUDIT] OOD: 221/452 (48.89%)
+[CONFIG] Baseline (No Prior) | acc=52.46 | f1=36.57 | ece=0.1133 | T*=0.8983 | converged=True
+[CALIBRATION] T* = 0.9928 | converged = True | 95% CI = [0.0500, 1.2285]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=0.9928 (95% CI [0.0500, 1.2285])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0741 (95% CI [0.0552, 0.1042])
+[COMPLEXITY-AUDIT] InDist: 353/646 (54.64%)
+[COMPLEXITY-AUDIT] OOD: 114/452 (25.22%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=42.53 | f1=29.71 | ece=0.0741 | T*=0.9928 | converged=True
+[CALIBRATION] T* = 1.1080 | converged = True | 95% CI = [0.0500, 1.0875]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=1.1080 (95% CI [0.0500, 1.0875])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0864 (95% CI [0.0636, 0.1152])
+[COMPLEXITY-AUDIT] InDist: 296/646 (45.82%)
+[COMPLEXITY-AUDIT] OOD: 168/452 (37.17%)
+[CONFIG] SIPAR (No Prior) | acc=42.26 | f1=33.45 | ece=0.0864 | T*=1.1080 | converged=True
+[CALIBRATION] T* = 1.1349 | converged = True | 95% CI = [0.0500, 1.1120]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.1349 (95% CI [0.0500, 1.1120])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1004 (95% CI [0.0805, 0.1293])
+[COMPLEXITY-AUDIT] InDist: 340/646 (52.63%)
+[COMPLEXITY-AUDIT] OOD: 112/452 (24.78%)
+[CONFIG] CAFT Full (No Prior) | acc=41.17 | f1=29.18 | ece=0.1004 | T*=1.1349 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 0.9257 | converged = True | 95% CI = [0.0500, 1.1097]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=0.9257 (95% CI [0.0500, 1.1097])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0512 (95% CI [0.0369, 0.0821])
+[COMPLEXITY-AUDIT] InDist: 244/646 (37.77%)
+[COMPLEXITY-AUDIT] OOD: 152/452 (33.63%)
+[CONFIG] Baseline (MAML Prior) | acc=36.07 | f1=28.34 | ece=0.0512 | T*=0.9257 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4465.8159 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=169.8202 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=163.3865 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=160.8911 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=159.7509 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=159.1961 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=158.9234 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=158.7898 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=158.7248 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=158.6929 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=158.6771 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.98 | hm_und=12.85 | hm_dir=12.85 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (0, 3), (0, 2)] | top3_drops=[10.56, 2.28, 0.55]
+[MEDIATION] Baseline (MAML Prior) | IE=0.3535 [0.2803, 0.4217]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 0.9469 | converged = True | 95% CI = [0.0500, 1.2176]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=0.9469 (95% CI [0.0500, 1.2176])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0704 (95% CI [0.0504, 0.1002])
+[COMPLEXITY-AUDIT] InDist: 289/646 (44.74%)
+[COMPLEXITY-AUDIT] OOD: 189/452 (41.81%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=43.53 | f1=29.53 | ece=0.0704 | T*=0.9469 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 0.5000 | converged = False | 95% CI = [0.0500, 1.1160]
+[AUDIT-ALERT] Temperature scaling failed to converge for SIPAR (MAML Prior). Reverted to T=0.5000
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.1287 (95% CI [0.1061, 0.1548])
+[COMPLEXITY-AUDIT] InDist: 356/646 (55.11%)
+[COMPLEXITY-AUDIT] OOD: 172/452 (38.05%)
+[CONFIG] SIPAR (MAML Prior) | acc=48.09 | f1=33.41 | ece=0.1287 | T*=0.5000 | converged=False
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 0.9766 | converged = True | 95% CI = [0.0500, 1.2063]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=0.9766 (95% CI [0.0500, 1.2063])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0292 (95% CI [0.0269, 0.0634])
+[COMPLEXITY-AUDIT] InDist: 276/646 (42.72%)
+[COMPLEXITY-AUDIT] OOD: 148/452 (32.74%)
+[CONFIG] CAFT Full (MAML Prior) | acc=38.62 | f1=29.28 | ece=0.0292 | T*=0.9766 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=7234.5181 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=173.2174 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=165.4040 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=162.1028 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=160.4192 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=159.5100 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=159.0090 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=158.7282 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=158.5680 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=158.4756 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=158.4221 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=15.12 | hm_und=12.78 | hm_dir=12.78 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 2), (0, 3), (0, 2)] | top3_drops=[7.47, 0.64, 0.46]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.2288 [0.1603, 0.2995]
+
+==================== Split 10/10 ====================
+[SPLIT-INFO] train=60 | val=60 | test=1098 (deep=879) | num_classes=6
+[CALIBRATION] T* = 1.1008 | converged = True | 95% CI = [0.8474, 1.3223]
+[AUDIT-SUCCESS] Baseline (No Prior) | T*=1.1008 (95% CI [0.8474, 1.3223])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0392 (95% CI [0.0340, 0.0739])
+[COMPLEXITY-AUDIT] InDist: 364/646 (56.35%)
+[COMPLEXITY-AUDIT] OOD: 84/452 (18.58%)
+[CONFIG] Baseline (No Prior) | acc=40.80 | f1=29.81 | ece=0.0392 | T*=1.1008 | converged=True
+[CALIBRATION] T* = 0.8890 | converged = True | 95% CI = [0.0500, 1.0749]
+[AUDIT-SUCCESS] Gradual Unfreezing (No Prior) | T*=0.8890 (95% CI [0.0500, 1.0749])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0577 (95% CI [0.0453, 0.0901])
+[COMPLEXITY-AUDIT] InDist: 361/646 (55.88%)
+[COMPLEXITY-AUDIT] OOD: 109/452 (24.12%)
+[CONFIG] Gradual Unfreezing (No Prior) | acc=42.81 | f1=32.77 | ece=0.0577 | T*=0.8890 | converged=True
+[CALIBRATION] T* = 0.9446 | converged = True | 95% CI = [0.0500, 1.1166]
+[AUDIT-SUCCESS] SIPAR (No Prior) | T*=0.9446 (95% CI [0.0500, 1.1166])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0614 (95% CI [0.0479, 0.0950])
+[COMPLEXITY-AUDIT] InDist: 366/646 (56.66%)
+[COMPLEXITY-AUDIT] OOD: 89/452 (19.69%)
+[CONFIG] SIPAR (No Prior) | acc=41.44 | f1=31.59 | ece=0.0614 | T*=0.9446 | converged=True
+[CALIBRATION] T* = 1.1243 | converged = True | 95% CI = [0.6727, 1.3272]
+[AUDIT-SUCCESS] CAFT Full (No Prior) | T*=1.1243 (95% CI [0.6727, 1.3272])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0588 (95% CI [0.0432, 0.0864])
+[COMPLEXITY-AUDIT] InDist: 359/646 (55.57%)
+[COMPLEXITY-AUDIT] OOD: 66/452 (14.60%)
+[CONFIG] CAFT Full (No Prior) | acc=38.71 | f1=26.88 | ece=0.0588 | T*=1.1243 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0047 | converged = True | 95% CI = [0.0500, 1.2339]
+[AUDIT-SUCCESS] Baseline (MAML Prior) | T*=1.0047 (95% CI [0.0500, 1.2339])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0634 (95% CI [0.0459, 0.0942])
+[COMPLEXITY-AUDIT] InDist: 368/646 (56.97%)
+[COMPLEXITY-AUDIT] OOD: 130/452 (28.76%)
+[CONFIG] Baseline (MAML Prior) | acc=45.36 | f1=33.71 | ece=0.0634 | T*=1.0047 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: Baseline (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=4452.4346 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=168.1276 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=161.8261 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=159.3661 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=158.2315 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=157.6846 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=157.4145 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.2800 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.2129 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.1796 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.1626 | n_valid=1098
+[UUAS] Baseline (MAML Prior) | mst=14.87 | hm_und=12.41 | hm_dir=12.41 | discarded=0.00%
+[KNOCKOUT] Baseline (MAML Prior) | top3_heads=[(1, 2), (0, 1), (1, 1)] | top3_drops=[4.37, 2.64, 1.0]
+[MEDIATION] Baseline (MAML Prior) | IE=0.1546 [0.0924, 0.2209]
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1845 | converged = True | 95% CI = [0.9542, 1.3387]
+[AUDIT-SUCCESS] Gradual Unfreezing (MAML Prior) | T*=1.1845 (95% CI [0.9542, 1.3387])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0632 (95% CI [0.0458, 0.0927])
+[COMPLEXITY-AUDIT] InDist: 373/646 (57.74%)
+[COMPLEXITY-AUDIT] OOD: 72/452 (15.93%)
+[CONFIG] Gradual Unfreezing (MAML Prior) | acc=40.53 | f1=28.49 | ece=0.0632 | T*=1.1845 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.0828 | converged = True | 95% CI = [0.0500, 1.2661]
+[AUDIT-SUCCESS] SIPAR (MAML Prior) | T*=1.0828 (95% CI [0.0500, 1.2661])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0569 (95% CI [0.0443, 0.0891])
+[COMPLEXITY-AUDIT] InDist: 381/646 (58.98%)
+[COMPLEXITY-AUDIT] OOD: 99/452 (21.90%)
+[CONFIG] SIPAR (MAML Prior) | acc=43.72 | f1=32.54 | ece=0.0569 | T*=1.0828 | converged=True
+[Prior Loader] Soft-loaded 24 params (alpha=0.4, noise=0.005).
+[CALIBRATION] T* = 1.1126 | converged = True | 95% CI = [0.0500, 1.2976]
+[AUDIT-SUCCESS] CAFT Full (MAML Prior) | T*=1.1126 (95% CI [0.0500, 1.2976])
+[ECE-AUDIT] Per-class sample counts: {0: 397, 1: 306, 2: 288, 3: 48, 4: 34, 5: 25}
+[ECE-AUDIT] ECE=0.0649 (95% CI [0.0484, 0.0913])
+[COMPLEXITY-AUDIT] InDist: 359/646 (55.57%)
+[COMPLEXITY-AUDIT] OOD: 126/452 (27.88%)
+[CONFIG] CAFT Full (MAML Prior) | acc=44.17 | f1=32.79 | ece=0.0649 | T*=1.1126 | converged=True
+[CAUSAL] Running UUAS + Knockout + Mediation for: CAFT Full (MAML Prior)
+[PROBE-TRAIN] step=0 | loss=6776.7271 | n_valid=1098
+[PROBE-TRAIN] step=200 | loss=171.8779 | n_valid=1098
+[PROBE-TRAIN] step=400 | loss=164.2349 | n_valid=1098
+[PROBE-TRAIN] step=600 | loss=161.0703 | n_valid=1098
+[PROBE-TRAIN] step=800 | loss=159.4700 | n_valid=1098
+[PROBE-TRAIN] step=1000 | loss=158.5988 | n_valid=1098
+[PROBE-TRAIN] step=1200 | loss=158.1063 | n_valid=1098
+[PROBE-TRAIN] step=1400 | loss=157.8244 | n_valid=1098
+[PROBE-TRAIN] step=1600 | loss=157.6638 | n_valid=1098
+[PROBE-TRAIN] step=1800 | loss=157.5726 | n_valid=1098
+[PROBE-TRAIN] step=1999 | loss=157.5206 | n_valid=1098
+[UUAS] CAFT Full (MAML Prior) | mst=14.84 | hm_und=12.33 | hm_dir=12.33 | discarded=0.00%
+[KNOCKOUT] CAFT Full (MAML Prior) | top3_heads=[(1, 2), (0, 1), (1, 1)] | top3_drops=[7.1, 2.19, 1.09]
+[MEDIATION] CAFT Full (MAML Prior) | IE=0.1856 [0.1258, 0.2536]
+
+================================================================================
+GLOBAL PERTURBATION AUDIT
+================================================================================
+
+====================================================================================================
+AGGREGATED RESULTS
+====================================================================================================
+| Configuration                            | Acc (%)         | F1 (%)     | ECE        | Conv.  | UUAS     |
+--------------------------------------------------------------------------------------------------------------
+| Baseline (No Prior)                      | 42.04 ± 5.87   |    30.75 |   0.0971 |  90.0% |      nan |
+| Gradual Unfreezing (No Prior)            | 41.03 ± 4.71   |    31.04 |   0.0869 | 100.0% |      nan |
+| SIPAR (No Prior)                         | 39.82 ± 3.61   |    30.61 |   0.0907 |  90.0% |      nan |
+| CAFT Full (No Prior)                     | 40.52 ± 1.97   |    29.87 |   0.0716 | 100.0% |      nan |
+| Baseline (MAML Prior)                    | 40.62 ± 3.49   |    30.77 |   0.0663 | 100.0% |    14.71 |
+| Gradual Unfreezing (MAML Prior)          | 43.56 ± 5.05   |    31.35 |   0.0801 | 100.0% |      nan |
+| SIPAR (MAML Prior)                       | 43.96 ± 3.86   |    31.80 |   0.0798 |  90.0% |      nan |
+| CAFT Full (MAML Prior)                   | 42.70 ± 3.49   |    31.52 |   0.0693 | 100.0% |    14.73 |
+==============================================================================================================
+[DUMP] results/ablation_summary.json
+[DUMP] results/head_knockout_results.json
