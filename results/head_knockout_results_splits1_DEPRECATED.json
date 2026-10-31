@@ -1,0 +1,26 @@
+{
+  "Baseline (MAML Prior)": {
+    "intact_acc_mean": 40.52823185920715,
+    "mc_null_mean": 41.10837858915329,
+    "mc_null_std": 4.491277652446452,
+    "target_heads_acc_mean": 32.513660192489624,
+    "target_drop_mean": 8.01457166671753,
+    "p_value_mean": 0.04950495049504951,
+    "mediation_ie_mean": 0.19775280832777778,
+    "mediation_ci_low_mean": 0.1258426895236112,
+    "mediation_ci_high_mean": 0.26522466548687557,
+    "n_splits": 1
+  },
+  "CAFT Full (MAML Prior)": {
+    "intact_acc_mean": 44.626593589782715,
+    "mc_null_mean": 46.66666653752327,
+    "mc_null_std": 2.559085320334607,
+    "target_heads_acc_mean": 42.71402657032013,
+    "target_drop_mean": 1.9125670194625854,
+    "p_value_mean": 0.09900990099009901,
+    "mediation_ie_mean": 0.042857114236486755,
+    "mediation_ci_low_mean": -0.02448978910392542,
+    "mediation_ci_high_mean": 0.11224492794272815,
+    "n_splits": 1
+  }
+}

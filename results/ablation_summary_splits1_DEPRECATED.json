@@ -1,0 +1,84 @@
+{
+  "Baseline (No Prior)": {
+    "acc_mean": 49.18032884597778,
+    "acc_std": 0.0,
+    "f1_mean": 36.14443503320217,
+    "ece_mean": 0.17092849455353124,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.2404178380966187
+  },
+  "Gradual Unfreezing (No Prior)": {
+    "acc_mean": 50.546449422836304,
+    "acc_std": 0.0,
+    "f1_mean": 38.591720039645836,
+    "ece_mean": 0.17759060772824592,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.1688032150268555
+  },
+  "SIPAR (No Prior)": {
+    "acc_mean": 45.35519182682037,
+    "acc_std": 0.0,
+    "f1_mean": 34.54241255919139,
+    "ece_mean": 0.13549662342054158,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.2053816318511963
+  },
+  "CAFT Full (No Prior)": {
+    "acc_mean": 42.07650125026703,
+    "acc_std": 0.0,
+    "f1_mean": 31.350707386930782,
+    "ece_mean": 0.13035609631481931,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.296144723892212
+  },
+  "Baseline (MAML Prior)": {
+    "acc_mean": 40.52823185920715,
+    "acc_std": 0.0,
+    "f1_mean": 30.25650226821502,
+    "ece_mean": 0.06967356092617162,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.233644723892212,
+    "uuas": {
+      "mst_uuas_mean": 14.894683293331163,
+      "mst_uuas_std": 0.0,
+      "hm_undirected_uuas_mean": 12.526583187287592,
+      "hm_undirected_uuas_std": 0.0,
+      "hm_directed_uuas_mean": 12.526583187287592,
+      "hm_directed_uuas_std": 0.0,
+      "discarded_ratio_mean": 0.0
+    }
+  },
+  "Gradual Unfreezing (MAML Prior)": {
+    "acc_mean": 46.17486298084259,
+    "acc_std": 0.0,
+    "f1_mean": 34.4567575181524,
+    "ece_mean": 0.12883569699167552,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.294661283493042
+  },
+  "SIPAR (MAML Prior)": {
+    "acc_mean": 49.089252948760986,
+    "acc_std": 0.0,
+    "f1_mean": 34.79926623404026,
+    "ece_mean": 0.13624797579586398,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.2556581497192383
+  },
+  "CAFT Full (MAML Prior)": {
+    "acc_mean": 44.626593589782715,
+    "acc_std": 0.0,
+    "f1_mean": 32.34566934406757,
+    "ece_mean": 0.07855458215611881,
+    "conv_ratio": 100.0,
+    "T_star_mean": 1.2397044897079468,
+    "uuas": {
+      "mst_uuas_mean": 14.761264556628015,
+      "mst_uuas_std": 0.0,
+      "hm_undirected_uuas_mean": 12.483899178538046,
+      "hm_undirected_uuas_std": 0.0,
+      "hm_directed_uuas_mean": 12.483899178538046,
+      "hm_directed_uuas_std": 0.0,
+      "discarded_ratio_mean": 0.0
+    }
+  }
+}

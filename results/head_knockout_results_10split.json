@@ -1,0 +1,18 @@
+{
+  "Baseline (MAML Prior)": {
+    "n_splits": 10,
+    "ie_mean": 0.1888,
+    "ie_ci_low_mean": 0.1192,
+    "ie_ci_high_mean": 0.2581,
+    "top1_drop_mean": 4.62,
+    "uuas_mst_mean": 14.71
+  },
+  "CAFT Full (MAML Prior)": {
+    "n_splits": 10,
+    "ie_mean": 0.1961,
+    "ie_ci_low_mean": 0.1291,
+    "ie_ci_high_mean": 0.2625,
+    "top1_drop_mean": 4.82,
+    "uuas_mst_mean": 14.73
+  }
+}

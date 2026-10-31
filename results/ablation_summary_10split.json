@@ -1,0 +1,66 @@
+{
+  "Baseline (No Prior)": {
+    "acc_mean": 42.04,
+    "acc_std": 5.87,
+    "f1_mean": 30.75,
+    "ece_mean": 0.0971,
+    "conv_ratio": 90.0,
+    "mst_uuas": null
+  },
+  "Gradual Unfreezing (No Prior)": {
+    "acc_mean": 41.03,
+    "acc_std": 4.71,
+    "f1_mean": 31.04,
+    "ece_mean": 0.0869,
+    "conv_ratio": 100.0,
+    "mst_uuas": null
+  },
+  "SIPAR (No Prior)": {
+    "acc_mean": 39.82,
+    "acc_std": 3.61,
+    "f1_mean": 30.61,
+    "ece_mean": 0.0907,
+    "conv_ratio": 90.0,
+    "mst_uuas": null
+  },
+  "CAFT Full (No Prior)": {
+    "acc_mean": 40.52,
+    "acc_std": 1.97,
+    "f1_mean": 29.87,
+    "ece_mean": 0.0716,
+    "conv_ratio": 100.0,
+    "mst_uuas": null
+  },
+  "Baseline (MAML Prior)": {
+    "acc_mean": 40.62,
+    "acc_std": 3.49,
+    "f1_mean": 30.77,
+    "ece_mean": 0.0663,
+    "conv_ratio": 100.0,
+    "mst_uuas": 14.71
+  },
+  "Gradual Unfreezing (MAML Prior)": {
+    "acc_mean": 43.56,
+    "acc_std": 5.05,
+    "f1_mean": 31.35,
+    "ece_mean": 0.0801,
+    "conv_ratio": 100.0,
+    "mst_uuas": null
+  },
+  "SIPAR (MAML Prior)": {
+    "acc_mean": 43.96,
+    "acc_std": 3.86,
+    "f1_mean": 31.8,
+    "ece_mean": 0.0798,
+    "conv_ratio": 90.0,
+    "mst_uuas": null
+  },
+  "CAFT Full (MAML Prior)": {
+    "acc_mean": 42.7,
+    "acc_std": 3.49,
+    "f1_mean": 31.52,
+    "ece_mean": 0.0693,
+    "conv_ratio": 100.0,
+    "mst_uuas": 14.73
+  }
+}
