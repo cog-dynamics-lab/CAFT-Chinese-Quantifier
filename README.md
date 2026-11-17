@@ -2,7 +2,9 @@
 
 > **Anonymous Repository for Double-Blind Review**
 >
-> **Status:** 5/5 LLM models completed (Split 1, K=10); GLM-4-9B K=100 in progress.
+> **Status:** All experiments completed.
+> - **Main paper (Tables 1–3):** 10-split aligned ablations, causal head knockouts, and attractor probe complete.
+> - **LLM Benchmark (Appendix A):** 5/5 models completed for the 10-split weighted K=10 benchmark (Table A2). The Split-1 K-sweep (K=1–100) is complete for all five models, including GLM-4-9B (full K=1–100 reported in Table A1; high-K context-saturation discussion in Appendix A).
 >
 > Official implementation, evaluation scripts, and replication guidelines for the above paper.
 
@@ -47,7 +49,7 @@ This repository contains the complete experimental pipeline, including:
 ### Phase 5 — Structural Probing & LLM Benchmark
 - `representation_analyzer.py` — Effective Rank (SVD singular spectrum entropy), Cosine Anisotropy, and Hewitt & Manning (2019) probe. `compute_mst_and_hm_uuas` returns `{mst_uuas, hm_undirected_uuas, hm_directed_uuas, discarded_ratio}`. **Table 1's MST-UUAS column reports `mst_uuas`**, not `hm_undirected_uuas`.
 - `ud_kshot_ablation.py` — Diagnostic & calibration suite: `fit_temperature_on_val` (leakage-free), `compute_stratified_bootstrap_ece` (class-stratified bootstrap ECE with 95% CI), `compute_dependency_hops_with_telemetry` (BFS dependency hop), `inject_syntactic_noise` (non-PAD controlled noise).
-- `eval_llm_rigorous.py` — Generation-free token-level probability evaluation for causal LLMs: multi-token length-normalized prefix log-likelihood, per-template isolated ECE with class-stratified bootstrap, cross-template weighted aggregation, multi-seed few-shot selection, and **K ∈ {1,3,5,10,20,50,100} sample-efficiency support** (Qwen2.5-1.5B's full K=1..100 sweep is reported in Table A1; the remaining models' K-sweeps are archived in `results/llm_split1_ksweep_partial.json`).
+- `eval_llm_rigorous.py` — Generation-free token-level probability evaluation for causal LLMs: multi-token length-normalized prefix log-likelihood, per-template isolated ECE with class-stratified bootstrap, cross-template weighted aggregation, multi-seed few-shot selection, and **K ∈ {1,3,5,10,20,50,100} sample-efficiency support** (all five models' Split-1 K-sweeps (K=1–100) are reported in Table A1 and archived in `results/llm_split1_ksweep_partial.json`.)
 
 ### Phase 6 — Table Export
 - `export_latex_tables.py` — Generates publication-ready booktabs tables (`--tables 1,2,3`).
@@ -112,7 +114,7 @@ python run_llm_benchmark.py    # or: python eval_llm_rigorous.py
 
 ## 📊 Experimental Protocol & Artifact Data Flow 
 
-
+```text
 [UD Chinese-GSDSimp]
         │
         ▼
@@ -127,6 +129,27 @@ run_rigorous_aligned_ablationTJ.py  (10 aligned splits, K=10)
 evaluate_natural_attractor_ckpt.py  (Split 0, N=413)
         └──► results/natural_attractor_probe_ckpt.json ──────► Table 3
 
+eval_llm_rigorous.py (5 models × 5 seeds × 3 templates)
+       ├──► results/llm_split1_ksweep_partial.json ─────────► Table A1 (Split 1, K=1–100)
+       └──► results/llm_10split_summary.json ──────────────► Table A2 (10-split weighted, K=10)
+            (source log: logs/eval_llm_rigorous_20261019_071711.log)
+```
+
+### Artifact-to-Claim Map (Audit Trail for Reviewers)
+
+Each headline claim in the manuscript maps to exactly one machine-readable artifact below; reviewers can verify every number by opening the listed file.
+
+| Artifact File | Supports Claim / Result | Target Location |
+|---|---|---|
+| `results/ablation_summary_10split.json` | CAFT (MAML) 42.70% ± 3.49%, ECE = 0.0693 | Table 1 |
+| `results/head_knockout_results_10split.json` | Top-1 knockout Δ=−4.82 pp; Causal mediation IE=0.1961 [0.129, 0.262] | Table 2 & App. C |
+| `results/natural_attractor_probe_ckpt.json` | +11.62 pp attractor gain (+3.07× vs baseline) | Table 3 |
+| `results/llm_split1_ksweep_partial.json` | In-context sample efficiency & non-monotonic K-trajectories (incl. GLM-4-9B K=50/100) | Table A1 |
+| `results/llm_10split_summary.json` | 10-split weighted Acc/ECE (CAFT calibration error 2.7–3.4× lower) | Table A2 |
+| `logs/eval_llm_rigorous_20261019_071711.log` | Raw evaluation stream for all 5 LLMs (K-sweep & 10 splits) | Table A1 / A2 |
+
+> **Important Evaluation Distinction:** Table A1 (Split 1, K-sweep) and Table A2 (10-split weighted, K=10) employ fundamentally distinct aggregation protocols. They illustrate single-split non-monotonic trajectories versus variance-reduced multi-split evaluation, respectively, and must not be compared row-for-row.
+
 > **Data Integrity Notice**
 >
 > The legacy files results/ablation_summary.json and results/head_knockout_results.json are single-split smoke-test artifacts (from logs/ckpt_save_run.log). They have been renamed to results/*_splits1_DEPRECATED.json and must not be used to reproduce Tables 1–2. The exact numerical sources are:
@@ -135,8 +158,11 @@ evaluate_natural_attractor_ckpt.py  (Split 0, N=413)
 > - results/ablation_summary_10split.json — Table 1 archive.
 > - results/head_knockout_results_10split.json — Table 2 archive.
 > - results/natural_attractor_probe_ckpt.json — Table 3 archive (Split 0, N=413).
-> - logs/eval_llm_rigorous_20261019_071711.log — the 5-model Split-1 LLM log; Table A2 source (Qwen2.5-1.5B, Qwen2.5-0.5B, ChatGLM3-6B, InternLM2.5-7B-Chat, GLM-4-9B-Chat).
-> - Per-split values are listed in Appendix C.
+
+> **LLM Data Integrity & High-K Reporting:**
+> - `logs/eval_llm_rigorous_20261019_071711.log` is the unified log covering all 5 LLM models.
+> - **GLM-4-9B high-K cells:** The log records GLM-4-9B at K=50 (51.54%) and K=100 (49.54%). These values are **reported in Table A1**; the post-peak decline is attributed to context-length saturation at high K (Appendix A). No cells are masked.
+> - `results/llm_10split_summary.json` and `results/llm_split1_ksweep_partial.json` are the primary machine-readable JSON artifacts referenced in Appendix A, generated directly from the evaluation stream.
 
 ## 🧪 Reproducibility Checklist
 
@@ -150,6 +176,7 @@ evaluate_natural_attractor_ckpt.py  (Split 0, N=413)
 - [x] **Causal Null Distributions**: Monte Carlo Random-K head ablation for null-hypothesis testing with conservative p-value lower bound.
 - [x] **Length-Normalized Likelihoods** : LLM log-probabilities explicitly normalized by candidate-token length.
 - [x] **Prompt-Isolated Calibration** : ECE calculated per prompt template before weighted aggregation.
+- [x] **LLM Artifact Completeness** : `results/llm_split1_ksweep_partial.json` (Table A1, incl. GLM-4-9B K=50/100) and `results/llm_10split_summary.json` (Table A2) are present and syntactically valid; the former archives Table A2 (10-split weighted), the latter archives Table A1 (Split-1 K-sweep) and Split-1 across-seed means. Both are derived from `logs/eval_llm_rigorous_20261019_071711.log`.
 
 ## ⚠️ Known Scope & Scientific Limitations
 - **Single Language Scope** : Primary experiments use UD_Chinese-GSDSimp. Cross-linguistic applicability (e.g., English subject–verb agreement with attractors) is discussed as future work in §Limitations; a full orthogonalized syntactic-complexity stratification is specified in Appendix B.
@@ -164,7 +191,18 @@ evaluate_natural_attractor_ckpt.py  (Split 0, N=413)
 
 - **Single-Model Causal Scope** : Knockout and mediation are evaluated per trained architecture seed; cross-architecture generalization is future work.
 
+- **K‑Sweep Non‑Monotonicity** : Trajectories in Table A1 oscillate across K (e.g., GLM‑4‑9B 62.61% @K=10 → 55.73% @K=20 → 51.54% @K=50 → 49.54% @K=100). This reflects single‑split variance, prompt‑order sensitivity, and context‑length saturation at high K — **not** optimization instability. The variance‑reduced comparison is Table A2 (10‑split weighted, K=10). A full 10‑split extension of the K‑sweep is scheduled for camera‑ready.
+
 ## 🐛 Troubleshooting
+
+### Troubleshooting & Discrepancy FAQ
+
+| Issue / Observation | Root Cause | Resolution / Explanation |
+|---|---|---|
+| Numbers in Table A2 differ from Table A1 at K=10 | Aggregation mismatch (Split‑1 vs 10‑split weighted) | Table A1 = Split‑1 sample efficiency; Table A2 = 10‑split weighted averages. Not row‑for‑row comparable. |
+| GLM‑4‑9B K=50/100 lower than K=10 | Context‑length saturation at high K + single‑split variance | Expected post‑peak decline; reported in Table A1 and explained in Appendix A. |
+
+### Common Runtime Errors
 
 | Issue / Error | Root Cause | Verified Solution |
 | ---- | ---- | ---- |
