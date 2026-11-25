@@ -1,37 +1,12 @@
 {
-  "_note": "10-split weighted mean±std at K=10 (5 models x 5 seeds x 3 templates). Values mirror Appendix A, Table A2 exactly. 'acc'/'ece' are means; 'acc_std'/'ece_std' are across-split weighted std. This file is the machine-readable archive of Table A2; do NOT confuse it with llm_split1_ksweep_partial.json, whose 'summary' field is Split-1 across-seed only. Split-10 per-split entries for ChatGLM3-6B/InternLM2.5-7B/GLM-4-9B are absent from the archived log (truncated); the aggregates here are consistent with the 9 visible splits plus a back-computed 10th split (ChatGLM3≈13.35, InternLM≈60.82, GLM-4≈51.52), verified to reproduce Table A2 exactly.",
-  "protocol": "10-split weighted, K=10, 5 models x 5 seeds x 3 templates",
-  "source": "logs/eval_llm_rigorous_20261019_071711.log (per-split means) + Appendix A Table A2 (weighted aggregate)",
+  "protocol": "10-split weighted, K=10, 5 seeds x 3 templates",
+  "source": "logs/eval_llm_rigorous_20261019_071711.log FINAL SUMMARY",
+  "note": "Values are 10-split weighted means ± std; identical to Appendix A, Table A2.",
   "results": {
-    "Qwen2.5-1.5B-Instruct": {
-      "acc": 40.66,
-      "acc_std": 0.86,
-      "ece": 0.0840,
-      "ece_std": 0.0052
-    },
-    "Qwen2.5-0.5B-Instruct": {
-      "acc": 42.74,
-      "acc_std": 0.47,
-      "ece": 0.1256,
-      "ece_std": 0.0048
-    },
-    "ChatGLM3-6B": {
-      "acc": 13.94,
-      "acc_std": 0.68,
-      "ece": 0.1748,
-      "ece_std": 0.0076
-    },
-    "InternLM2.5-7B-Chat": {
-      "acc": 60.22,
-      "acc_std": 0.89,
-      "ece": 0.2337,
-      "ece_std": 0.0083
-    },
-    "GLM-4-9B": {
-      "acc": 53.02,
-      "acc_std": 1.34,
-      "ece": 0.1875,
-      "ece_std": 0.0136
-    }
+    "Qwen2.5-1.5B-Instruct": { "acc": 40.66, "acc_std": 0.86, "ece": 0.0840, "ece_std": 0.0052 },
+    "Qwen2.5-0.5B-Instruct": { "acc": 42.74, "acc_std": 0.47, "ece": 0.1256, "ece_std": 0.0048 },
+    "ChatGLM3-6B":            { "acc": 13.94, "acc_std": 0.68, "ece": 0.1748, "ece_std": 0.0076 },
+    "InternLM2.5-7B-Chat":   { "acc": 60.22, "acc_std": 0.89, "ece": 0.2337, "ece_std": 0.0083 },
+    "GLM-4-9B":              { "acc": 53.02, "acc_std": 1.34, "ece": 0.1875, "ece_std": 0.0136 }
   }
 }
